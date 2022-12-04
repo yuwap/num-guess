@@ -39,6 +39,11 @@ app.use("/new/:min/:max/:try", (req, res) => {
 })
 app.use("/guess/:uid/:number", (req, res) => {
 	const uid = req.params.uid
+	if (dict.get(uid) === undefined) {
+		res.status(404).json({ rem: -1 })
+		console.log({ uid })
+		return
+	}
 	const num = dict.get(uid).num
 	const rem = dict.get(uid).rem - 1
 	const gss = Number(req.params.number)

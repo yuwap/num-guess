@@ -1,0 +1,112 @@
+/*
+ * Copyright (C) 2022 Heptazhou <zhou@0h7z.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+@font-face {
+	font-family: "Iosevnya";
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+	src: url("@/font/iosevnya-regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Iosevnya";
+	font-display: swap;
+	font-weight: 400;
+	font-style: italic;
+	src: url("@/font/iosevnya-regular-italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Iosevnya";
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+	src: url("@/font/iosevnya-bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Iosevnya";
+	font-display: swap;
+	font-weight: 700;
+	font-style: italic;
+	src: url("@/font/iosevnya-bold-italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Charis6";
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+	src: url("@/font/charis-regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Charis6";
+	font-display: swap;
+	font-weight: 400;
+	font-style: italic;
+	src: url("@/font/charis-italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Charis6";
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+	src: url("@/font/charis-bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Charis6";
+	font-display: swap;
+	font-weight: 700;
+	font-style: italic;
+	src: url("@/font/charis-bolditalic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Inter3";
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+	src: url("@/font/inter-regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Inter3";
+	font-display: swap;
+	font-weight: 400;
+	font-style: italic;
+	src: url("@/font/inter-italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Inter3";
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+	src: url("@/font/inter-bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Inter3";
+	font-display: swap;
+	font-weight: 700;
+	font-style: italic;
+	src: url("@/font/inter-bolditalic.ttf") format("truetype");
+}

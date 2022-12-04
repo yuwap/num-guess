@@ -16,6 +16,7 @@
  */
 
 import "@/main.pcss"
+import "@/font.css"
 
 const server = "https://localhost:3033"
 
@@ -27,6 +28,11 @@ async function checkguess() {
 	const guess_this = Number(guess_number.value)
 	const res = await fetch(`${server}/guess/${uid}/${guess_this}`).then((r) => r.json())
 
+	if (res.rem < 0 || res.status === 404) {
+		alert(`Server refused: unknown ${res.rem < 0 ? "token" : "error"}. The game will try to restart.`)
+		await startgame()
+		return
+	}
 	count++
 	if (count === 1) guess_list.textContent = "Previous guesses:"
 	guess_list.textContent += ` ${guess_this}`

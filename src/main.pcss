@@ -27,17 +27,17 @@
 	--color-scroll-fore--hover: #7a7a7a;
 	--color-scroll-fore-active: #a6a6a6;
 	--color-scroll-fore: var(--color-scroll-fore---base);
-	--font-family-mono-ja: Saranya Mono JA H, monospace;
-	--font-family-mono-sc: Saranya Mono SC H, monospace;
-	--font-family-mono-tc: Saranya Mono TC H, monospace;
+	--font-family-mono-ja: Saranya Mono JA H, Iosevnya, monospace;
+	--font-family-mono-sc: Saranya Mono SC H, Iosevnya, monospace;
+	--font-family-mono-tc: Saranya Mono TC H, Iosevnya, monospace;
 	--font-family-mono: var(--font-family-mono-sc);
-	--font-family-sans-ja: Saranya UI JA H, sans-serif;
-	--font-family-sans-sc: Saranya UI SC H, sans-serif;
-	--font-family-sans-tc: Saranya UI TC H, sans-serif;
+	--font-family-sans-ja: Saranya UI JA H, Inter3, sans-serif;
+	--font-family-sans-sc: Saranya UI SC H, Inter3, sans-serif;
+	--font-family-sans-tc: Saranya UI TC H, Inter3, sans-serif;
 	--font-family-sans: var(--font-family-sans-sc);
-	--font-family-serf-ja: Saranya Roman JA H, serif;
-	--font-family-serf-sc: Saranya Roman SC H, serif;
-	--font-family-serf-tc: Saranya Roman TC H, serif;
+	--font-family-serf-ja: Saranya Roman JA H, Charis6, serif;
+	--font-family-serf-sc: Saranya Roman SC H, Charis6, serif;
+	--font-family-serf-tc: Saranya Roman TC H, Charis6, serif;
 	--font-family-serf: var(--font-family-serf-sc);
 	--font-size: 124%;
 	--tab-size: 4;
@@ -102,6 +102,10 @@ pre,
 samp,
 textarea {
 	font-size: inherit;
+}
+
+button {
+	font-family: var(--font-family-sans);
 }
 
 code,
@@ -222,12 +226,19 @@ input {
 	margin-bottom: 0;
 
 	& header {
+		& h1 {
+			font-family: var(--font-family-serf);
+			font-weight: normal;
+		}
 		& button {
 			padding: 0 0.4em;
 			margin-right: 0.4em;
 		}
 	}
 	& form {
+		& label {
+			font-family: var(--font-family-sans);
+		}
 		& input[type="number"] {
 			width: 8em;
 		}
