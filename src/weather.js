@@ -34,21 +34,26 @@ function post(url, cb, para, id) {
 	request.send(para)
 }
 function api(id, i, gen) {
-	const x = "https://weatherwidget.org/tr/"
-	const y = "Hava Durumu Widget HTML"
-	const z = `Web Sitesine <a href="${x}" id="${id}_u" target="_blank">${y}</a> Göm`
-	const v = document.getElementById(id).getAttribute("v")
-	const a = document.getElementById(id).getAttribute("a")
-	const l = document.getElementById(id).getAttribute("loc")
-	const u = x + "|||" + y
-	const b = gen == 1 ? "" : z
+	if (id === "ww_a19f7d045f952") {
+		var t = "celsius"
+		var x = "https://weatherwidget.org/tr/"
+		var y = "Hava Durumu Widget HTML"
+		var z = `Web Sitesine <a href="${x}" id="${id}_u" target="_blank">${y}</a> Göm`
+	}
+	if (id === "ww_10d14ab7c31aa") {
+		var t = "fahrenheit"
+		var x = "https://weatherwidget.org/pl/"
+		var y = "HTML Widget Pogodowy"
+		var z = `Bezpłatny <a href="${x}" id="${id}_u" target="_blank">${y}</a> dla Witryny`
+	}
+	const v = "1.3"
+	const a = `{"t":"horizontal","lang":"en","sl_lpl":1,"ids":[],"sl_ics":"one_a","sl_sot":"${t}","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}`
+	const l = "auto"
+	const u = `${x}|||${y}`
+	const b = gen === 1 ? "" : z
 	const g = gen
 	const para = `v=${v}&a=${a}&l=${l}&u=${u}&ub=${b}&i=${i}&g=${g}&id=${id}`
 	post("https://app1.weatherwidget.org/data/", update, para, id)
-}
-function query(id, gen) {
-	if (document.getElementById(id).getAttribute("loc") === "auto") get("https://api.ipify.org/", api, id, gen)
-	else api(id, false, gen)
 }
 function update(data, id) {
 	data = typeof JSON.parse === "undefined" ? JSON.decode(data) : JSON.parse(data)
@@ -74,6 +79,7 @@ function update(data, id) {
 }
 function widget(id, gen) {
 	if (gen === 1) loadingToggle(id, 1)
-	query(id, gen)
+	get("https://api.ipify.org/", api, id, gen)
 }
 widget("ww_a19f7d045f952", 0)
+widget("ww_10d14ab7c31aa", 0)
